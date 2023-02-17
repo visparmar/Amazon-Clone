@@ -1,0 +1,55 @@
+.container{
+    width: 100%;
+    min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    background-color:white;
+    opacity: 0.9;
+    z-index: 1;
+    
+}
+.dollar{
+    font-size: 14px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+.product-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+.product-images > img{
+    max-width: 200px;
+    object-fit: contain;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.price{
+    font-size: 18px;
+    font-weight: 700;
+}
+.content-content{
+    font-weight: 500;
+}
+.button button{
+    background-color: orange;
+}
+
+.content .MuiSvgIcon-root{
+color: orange;
+mask-image: linear-gradient(to top,rgb(0, 0, 0,1),rgba(0, 0, 0, 0));
+}
