@@ -1,13 +1,17 @@
 import React from 'react'
 import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
 
 function Header() {
     return (
         <div className='header'>
-
-            <img src="/logo.jpg" alt="" className="logo" />
+               
+               <Link to={"/"}>
+               <img src="/logo.jpg" alt="" className="logo" />
+               </Link>
+           
 
 
             <div className="header-search">
@@ -40,7 +44,10 @@ function Header() {
 
                  <div className="basket">
                     <span className='qty'>0</span>
-                <ChildFriendlyIcon className='basket'/>
+                   <Link to={"/Checkout"}>
+                   <ChildFriendlyIcon className='basket'/>
+                   </Link> 
+                
                  </div>
 
         </div>

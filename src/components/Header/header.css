@@ -46,10 +46,14 @@ z-index: 100;
 }
 .logo{
     object-fit: contain;
-    margin: 0 20px;
-    margin-top: 18px;
+    margin: 0 10px;
+    padding: 10px;
+    margin-top: 3px;
     width: 100px;
     min-width: 100px;
+}
+.logo:hover{
+    border: 1px solid white;
 }
 .header-option{
     display: flex;

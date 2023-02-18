@@ -1,0 +1,119 @@
+.Checkout{
+    width: auto;
+    /* height: 100vh; */
+    display: flex;
+    padding: 20px;
+    background-color: gainsboro;
+    height: max-content;
+    
+}
+.product{
+    width: 60%;
+}
+.left >.container-{
+    display: flex;
+    flex-direction: row;
+
+}
+.container- .Name{
+    padding: 10px;
+}
+.container- .image{
+    height: 200px;
+    width: 200px;
+}
+.container- .image img{
+    object-fit: contain;
+}
+.container- .Name p{
+    font-weight: 400;
+    font-size: 22px;
+}
+.left{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+margin-right: 10px;
+    background-color: white;
+    
+}
+.left > h1{
+    padding-bottom: 14px;
+    font-weight: 400;
+}
+
+.right{
+    /* margin: 10px; */
+    width: 400px;
+    margin-top: 10px;
+margin-left: 10px;
+
+}
+.right .total{
+    height: auto;
+    background-color: white;
+padding: 20px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.proceed_to_buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.proceed_to_buy button{
+    height: 30px;
+    width: 300px;
+    /* font-size: 18px; */
+     background-color: rgb(241, 226, 8);
+     border: none;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+}
+.total > .freeDelivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px ;
+}
+.total > .freeDelivery p{
+    color: green;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.freeDelivery .MuiSvgIcon-root{
+   color: green;
+    
+}
+.check-box{
+    display: flex;
+    gap: 4px;
+    padding: 5px;
+    
+}
+.check-box input[type=checkbox]{
+    
+  height: 25px;
+    
+}
+
+.check-box label{
+    padding-right: 40px;
+    
+}
+.price-right-cart{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgb(184, 168, 168);
+}
+
+.price-right-cart span{
+  color:  rgb(122, 114, 114);
+}
