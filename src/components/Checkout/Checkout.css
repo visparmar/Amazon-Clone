@@ -1,5 +1,6 @@
 .Checkout{
     width: auto;
+    min-width: 1000px;
     /* height: 100vh; */
     display: flex;
     padding: 20px;
@@ -7,15 +8,66 @@
     height: max-content;
     
 }
+.wrapper{
+    display: flex;
+   
+}
+.qty-instock-delete{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    gap: 10px;
+}
+.qty-instock-delete p{
+    color: green;
+}
+.qty-instock-delete .delete :nth-child(1){
+    padding-left: 10px;
+border-right: 1px solid rgb(190, 178, 178);
+border-left: 1px solid rgb(190, 178, 178);
+
+}
+.qty-instock-delete .delete span{
+    border-right: 1px solid rgb(190, 178, 178);
+    padding: 0 20px;
+    color:  skyblue;
+    cursor: pointer;
+}
+.qty-instock-delete .list{
+    display: inline;
+}
+.qty-instock-delete .list select{
+  background-color: rgb(163, 154, 154);
+   height: 30px;
+   width: 70px;
+  
+   border-radius: 10px;
+   margin-right:20px ;
+}
+.checkout-container{
+    width: 100%;
+    /* display: flex; */
+}
 .product{
     width: 60%;
 }
 .left >.container-{
     display: flex;
-    flex-direction: row;
+    /* flex-direction:column ; */
+    
 
+}.Name{
+    width: 100%;
 }
 .container- .Name{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.container- .Name .Amount{
+    font-weight: 700;
+    font-size: 18px;
     padding: 10px;
 }
 .container- .image{
@@ -51,6 +103,7 @@ margin-left: 10px;
 }
 .right .total{
     height: auto;
+    width: auto;
     background-color: white;
 padding: 20px;
 

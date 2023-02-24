@@ -1,7 +1,9 @@
 .header{
     width: 100%;
+    min-width: 1040px;
  
     height: 60px;
+    padding-right: 0 0px;
 display: flex;
 align-items: center;
 background-color: var(--black);
@@ -10,6 +12,7 @@ position: sticky;
 justify-content: space-evenly;
 top: 0;
 z-index: 100;
+
 }
 .header-nav{
     display: flex;
@@ -60,18 +63,28 @@ z-index: 100;
     color: white;
     flex-direction: column;
     margin: 10px 10px;
+    padding: 10px 10px ;
+}
+.header-option:hover{
+    border: 1px solid white;
 }
 .basket{
     color: white;
     height: 50px;
-    height: 50px;
+    width: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 10px;
-    /* border: 1px solid white; */
+    margin-right: 10px;
+    /* padding: 5px 5px; */
+ 
     
+}
+
+
+#hover:hover{
+   border:1px solid  white;
 }
 .qty{
     color: orange;
@@ -80,5 +93,5 @@ z-index: 100;
 .MuiSvgIcon-root {
     cursor: pointer; 
     height: 80px;
-    
+    /* border: none; */
 }

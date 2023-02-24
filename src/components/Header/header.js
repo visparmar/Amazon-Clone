@@ -42,7 +42,8 @@ function Header() {
             </div>
 
 
-                 <div className="basket">
+
+<div className="basket" id='hover'>
                     <span className='qty'>0</span>
                    <Link to={"/Checkout"}>
                    <ChildFriendlyIcon className='basket'/>
@@ -50,7 +51,10 @@ function Header() {
                 
                  </div>
 
-        </div>
+
+</div>
+                
+        
     )
 }
 export default Header
