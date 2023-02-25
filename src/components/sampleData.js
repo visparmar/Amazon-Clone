@@ -24,7 +24,7 @@ const MenuItems = [
           "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fburger3.png?alt=media&token=0ebe8311-6378-411b-9b6e-d7a6d2a106a2",
         name: "Euphoria Burger",
         ratings: 5,
-        price: "12",
+        price: 12,
       },
   ];
   

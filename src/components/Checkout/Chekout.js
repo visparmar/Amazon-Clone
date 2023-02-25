@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import './Checkout.css'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { checkboxClasses } from '@mui/material';
@@ -6,13 +6,29 @@ import { useStatevalue } from '../stateprovider/Stateprovider';
 
 
 
-
 function Checkout() {
 
     const [{basket},dispatch]=useStatevalue();
-  
+    const [total, settotal] = useState(0);
+    useEffect(()=>{
+        var result = basket.reduce(function(tot, arr) {
+            return tot + arr.price
+          },0);
+        //   console.log(result);
+          settotal(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(result))
+    },[basket])
+    // console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(total));
+//   console.log("==>"+(total));
 
+   function removeFromBasket(ele){
+         // remove the item from the basket
 
+         dispatch({
+            type:'Remove_From_Basket',
+            id: (ele.id),
+         })
+         console.log((ele));
+   }
 
     return (
         <>
@@ -34,7 +50,7 @@ function Checkout() {
                            <div className="container-">
        
                                <div className="image">
-                                   <img src="/logo192.png" alt="" className='checkout-image' />
+                                   <img src={ele.imgSrc} alt="" className='checkout-image' />
                                </div>
                                <div className="checkout-container">
                                       
@@ -64,7 +80,7 @@ function Checkout() {
                                </div>
                               
                               <div className='delete'>
-                              <span> Delete </span>
+                              <span onClick={()=>removeFromBasket(ele)}> Delete </span>
                               <span> Save for later </span><span> Add to lst </span>
                               </div>
                                   
@@ -87,7 +103,7 @@ function Checkout() {
 
 
 <div className='Grand-Total'>
-    <span className='Grand-Total-container-Total'>Total</span><span className='Grand-Total-container-rs'>0</span>
+    <span className='Grand-Total-container-Total'>Total</span><span className='Grand-Total-container-rs'>{total!=0?'$':''} {total}</span>
 </div>
 
                        </div>
@@ -104,7 +120,7 @@ function Checkout() {
                         </div>
 
 
-                        <h3>Subtotal ({basket.length} item): $ 499.00</h3>
+                        <h3>Subtotal ({basket.length} item):{total!=0?'$':''} {total}</h3>
 
                         <div className="check-box">
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />

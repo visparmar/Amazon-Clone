@@ -32,7 +32,7 @@ function Home(){
 
          {MenuItems.map((ele)=>{
             return(
-               <Product Name={ele.name} price={ele.price} rating={ele.ratings} imgSrc={ele.imgSrc} />
+               <Product Name={ele.name} price={ele.price} rating={ele.ratings} imgSrc={ele.imgSrc}  id={ele.id}/>
             )
                
          })
@@ -45,13 +45,13 @@ function Home(){
        </div>
        <div className="home_row">
        
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={50000} rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
           
        </div>
        <div className="home_row">
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
         
        </div>
 
