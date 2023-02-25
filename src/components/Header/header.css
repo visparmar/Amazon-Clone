@@ -1,9 +1,7 @@
 .header{
     width: 100%;
-    min-width: 1040px;
  
     height: 60px;
-    padding-right: 0 0px;
 display: flex;
 align-items: center;
 background-color: var(--black);
@@ -12,7 +10,6 @@ position: sticky;
 justify-content: space-evenly;
 top: 0;
 z-index: 100;
-
 }
 .header-nav{
     display: flex;
@@ -49,49 +46,35 @@ z-index: 100;
 }
 .logo{
     object-fit: contain;
-    margin: 0 10px;
-    padding: 10px;
-    margin-top: 3px;
+    margin: 0 20px;
+    margin-top: 18px;
     width: 100px;
     min-width: 100px;
-}
-.logo:hover{
-    border: 1px solid white;
 }
 .header-option{
     display: flex;
     color: white;
     flex-direction: column;
     margin: 10px 10px;
-    padding: 10px 10px ;
-}
-.header-option:hover{
-    border: 1px solid white;
 }
 .basket{
     color: white;
     height: 50px;
-    width: 50px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
-    /* padding: 5px 5px; */
- 
+    padding-right: 10px;
+    /* border: 1px solid white; */
     
-}
-
-
-#hover:hover{
-   border:1px solid  white;
 }
 .qty{
     color: orange;
     font-weight: 700;
 }
 .MuiSvgIcon-root {
-    cursor: pointer; 
+    cursor: pointer;
     height: 80px;
-    /* border: none; */
+    
 }
