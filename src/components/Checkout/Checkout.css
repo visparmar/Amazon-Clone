@@ -69,6 +69,7 @@ border-left: 1px solid rgb(190, 178, 178);
     font-weight: 700;
     font-size: 18px;
     padding: 10px;
+    padding-right: 30px;
 }
 .container- .image{
     height: 200px;
@@ -87,6 +88,9 @@ border-left: 1px solid rgb(190, 178, 178);
     margin-top: 10px;
 margin-right: 10px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+   
     
 }
 .left > h1{
@@ -169,4 +173,24 @@ align-items: center;
 
 .price-right-cart span{
   color:  rgb(122, 114, 114);
+}
+
+
+/* Grand Total component of Checkout Cart */
+
+.Grand-Total{
+    border-top: 1px solid gray;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.Grand-Total .Grand-Total-container-Total{
+  font-weight: 600;
+  font-size: 20px;
+}
+.Grand-Total .Grand-Total-container-rs{
+   font-weight: 600;
+   font-size: 28px;
 }

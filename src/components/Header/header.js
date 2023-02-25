@@ -3,8 +3,10 @@ import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
+import { useStatevalue } from '../stateprovider/Stateprovider';
 
 function Header() {
+    const [{basket },dispatch]=useStatevalue();
     return (
         <div className='header'>
                
@@ -44,7 +46,7 @@ function Header() {
 
 
 <div className="basket" id='hover'>
-                    <span className='qty'>0</span>
+                    <span className='qty'>{basket?.length}</span>
                    <Link to={"/Checkout"}>
                    <ChildFriendlyIcon className='basket'/>
                    </Link> 
