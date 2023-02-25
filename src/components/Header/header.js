@@ -1,19 +1,13 @@
 import React from 'react'
 import './header.css'
 import SearchIcon from '@mui/icons-material/Search';
-import { Link } from 'react-router-dom';
 import ChildFriendlyIcon from '@mui/icons-material/ChildFriendly';
-import { useStatevalue } from '../stateprovider/Stateprovider';
 
 function Header() {
-    const [{basket },dispatch]=useStatevalue();
     return (
         <div className='header'>
-               
-               <Link to={"/"}>
-               <img src="/logo.jpg" alt="" className="logo" />
-               </Link>
-           
+
+            <img src="/logo.jpg" alt="" className="logo" />
 
 
             <div className="header-search">
@@ -44,19 +38,12 @@ function Header() {
             </div>
 
 
-
-<div className="basket" id='hover'>
-                    <span className='qty'>{basket?.length}</span>
-                   <Link to={"/Checkout"}>
-                   <ChildFriendlyIcon className='basket'/>
-                   </Link> 
-                
+                 <div className="basket">
+                    <span className='qty'>0</span>
+                <ChildFriendlyIcon className='basket'/>
                  </div>
 
-
-</div>
-                
-        
+        </div>
     )
 }
 export default Header
