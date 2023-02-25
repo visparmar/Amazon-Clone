@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Product from './product'
+import  { MenuItems, Items } from '../sampleData';
 
 function Home(){
    return(
@@ -12,20 +13,45 @@ function Home(){
 
        
        <div className="home_row">
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
-          <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
+       {/* {MenuItems.map((data) => {
+                return (
+                  <div key={data.id} className="menu-items" onClick={() => filterData(data.itemId)}>
+                    <MenuCard imgSrc={data.imgSrc}
+                      name={data.name}
+                      isActive={data.id === 1 ? true : false}
+                    />
+                  </div>
+                );
+              })} */}
+
+
+
+
+
+
+
+         {MenuItems.map((ele)=>{
+            return(
+               <Product Name={ele.name} price={ele.price} rating={ele.ratings} imgSrc={ele.imgSrc}  id={ele.id}/>
+            )
+               
+         })
+    }
+
+       {/* <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3'  />
+          <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' /> */}
        
 
        </div>
        <div className="home_row">
        
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={50000} rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
           
        </div>
        <div className="home_row">
-       <Product Name='Redimi Note 7s Phone Cover' price='5' rating='3' />
+       <Product Name='Redimi Note 7s Phone Cover' price={5} rating='3' />
         
        </div>
 
