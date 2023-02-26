@@ -16,7 +16,7 @@ function Product({ Name, price, rating,imgSrc,id }) {
         price: price,
         rating: rating,
         imgSrc:imgSrc,
-        id:id,
+        id:new Date().getTime(),
       },
     });
 

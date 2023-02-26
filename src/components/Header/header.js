@@ -26,11 +26,12 @@ function Header() {
 
 
             <div className="header-nav">
+                <Link to={"./login"}>
                <div className="header-option">
-                   <p className='line-1'>Hello</p>
+                   <p className='line-1'>Hello Guest</p>
                    <span className='line-2'>sign in</span>
                </div>
-
+               </Link>
                <div className="header-option">
                <p className='line-1'>Returns </p>
                    <span className='line-2'>& Orders</span>
@@ -40,7 +41,7 @@ function Header() {
                <p className='line-1'>your</p>
                    <span className='line-2'>Prime</span>
                </div>
-
+               
             </div>
 
 

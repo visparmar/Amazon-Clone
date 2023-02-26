@@ -1,0 +1,107 @@
+.main-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.sign-in-container{
+    width: 100%;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+padding-left: 45px;
+padding-top: 20px;
+font-weight: 490;
+color: black;
+}
+.sign-in{
+    font-size: 30px;
+    left: 0;
+}
+.upper-image{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.upper-image img{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+.Login-container{
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    border: 0.1px solid rgb(194, 184, 184);
+    border-radius: 5px;
+}
+.Email{
+    margin-bottom:0px;
+    margin-top: 20px;
+}
+.password{
+    margin-bottom:10px;
+    margin-top: 10px;
+}
+.Email-text{
+    font-size: 18px;
+}
+.password-text{
+    font-size: 18px;
+}
+.Email input{
+    width: 280px;
+   height: 30px;
+   border-radius: 5px;
+   padding:0 10px;
+   border:0.5px solid gray;
+   
+   outline: none;
+}
+.Email input:focus{
+   border:1px solid orange;
+   box-shadow: 0 0 5px 0.1px rgba(189, 126, 10, 0.76);
+   /* box-shadow: 0px 0px 0.1px orange; */
+}
+
+.password input{
+    width: 280px; 
+    height: 30px;
+    border-radius: 5px;
+    padding:0 10px;
+    border:0.5px solid gray;
+   outline: none;
+ }
+ .password input:focus{
+    border:1px solid orange;
+    -webkit-box-shadow: 0 0 1px 1px orange;
+    -moz-box-shadow: 0 0 1px 1px orange;
+    box-shadow: 0 0 5px 0.1px rgba(189, 126, 10, 0.76);
+   
+ }
+ .login-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .login-button button{
+    margin-top: 10px;
+    width: 300px;
+    height: 34px;
+    /* background-color: rgb(235, 200, 113); */
+    /* Created with https://www.css-gradient.com */
+background: #FBF6A8;
+background: -webkit-linear-gradient(top, #FBF6A8, #F1BB2B);
+background: -moz-linear-gradient(top, #FBF6A8, #F1BB2B);
+background: linear-gradient(to bottom, #FBF6A8, #F1BB2B);
+    border: 0.5px solid goldenrod;
+ }
