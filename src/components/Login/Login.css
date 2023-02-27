@@ -1,5 +1,6 @@
 .main-container{
-    width: 100%;
+    width: auto;
+    min-width: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,6 +10,7 @@
 }
 .sign-in-container{
     width: 100%;
+    min-width: 1px;
 display: flex;
 justify-content: flex-start;
 align-items: flex-start;
@@ -24,6 +26,7 @@ color: black;
 .upper-image{
     height: 90px;
     width: 100%;
+    min-width: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,11 +35,13 @@ color: black;
 .upper-image img{
     height: 200px;
     width: 200px;
+    min-width: 10px;
     object-fit: contain;
 }
 .Login-container{
     height: 400px;
     width: 350px;
+    min-width: 10px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -54,13 +59,16 @@ color: black;
 }
 .Email-text{
     font-size: 18px;
+    font-weight: 500;
 }
 .password-text{
     font-size: 18px;
+    font-weight: 500;
 }
 .Email input{
     width: 280px;
    height: 30px;
+   min-width: 10px;
    border-radius: 5px;
    padding:0 10px;
    border:0.5px solid gray;
@@ -77,6 +85,7 @@ color: black;
     width: 280px; 
     height: 30px;
     border-radius: 5px;
+    min-width: 10px;
     padding:0 10px;
     border:0.5px solid gray;
    outline: none;
@@ -88,7 +97,7 @@ color: black;
     box-shadow: 0 0 5px 0.1px rgba(189, 126, 10, 0.76);
    
  }
- .login-button{
+ .create-Account-button,.login-button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +105,7 @@ color: black;
  .login-button button{
     margin-top: 10px;
     width: 300px;
+    min-width: 10px;
     height: 34px;
     /* background-color: rgb(235, 200, 113); */
     /* Created with https://www.css-gradient.com */
@@ -104,4 +114,24 @@ background: -webkit-linear-gradient(top, #FBF6A8, #F1BB2B);
 background: -moz-linear-gradient(top, #FBF6A8, #F1BB2B);
 background: linear-gradient(to bottom, #FBF6A8, #F1BB2B);
     border: 0.5px solid goldenrod;
+ }
+ .sign-in-policy{
+    width: 300px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+ }
+
+ .create-Account-button button{
+    margin-top: 10px;
+    width: 300px;
+    min-width: 10px;
+    height: 34px;
+   border: 1px solid  rgb(169,169,169);
+   background: rgb(255,255,255);
+   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(220,220,220,1) 98%);
+   color:  black;
+   font-weight: 600;
  }
