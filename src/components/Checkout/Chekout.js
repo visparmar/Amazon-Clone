@@ -1,114 +1,55 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import './Checkout.css'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { checkboxClasses } from '@mui/material';
 import { useStatevalue } from '../stateprovider/Stateprovider';
+import { useNavigate } from 'react-router-dom';
+import ShoopingContainer from './ShoopingContainer';
 
 
 
 function Checkout() {
+    const navigate = useNavigate();
 
-    const [{basket},dispatch]=useStatevalue();
+    const [{ basket ,user }, dispatch] = useStatevalue();
     const [total, settotal] = useState(0);
-    useEffect(()=>{
-        var result = basket.reduce(function(tot, arr) {
+    useEffect(() => {
+        var result = basket.reduce(function (tot, arr) {
             return tot + arr.price
-          },0);
+        }, 0);
         //   console.log(result);
-          settotal(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(result))
-    },[basket])
+        settotal(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(result))
+    }, [basket])
     // console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(total));
-//   console.log("==>"+(total));
+    //   console.log("==>"+(total));
 
-   function removeFromBasket(ele){
-         // remove the item from the basket
+    function removeFromBasket(ele) {
+        // remove the item from the basket
 
-         dispatch({
-            type:'Remove_From_Basket',
+        dispatch({
+            type: 'Remove_From_Basket',
             id: (ele.id),
-         })
-         console.log((ele));
-   }
+        })
+        // console.log((ele));
+    }
 
     return (
         <>
 
             <div className="Checkout">
 
-                 
-                           
-                           <div className="left">
+                
 
-                           <h1>Shooping Cart</h1>
-                           <div className='price-right-cart'>
-                               <span>Price</span>
-                           </div>
-       
-       
-                           {basket.map((ele)=>{
-                    return(
-                           <div className="container-">
-       
-                               <div className="image">
-                                   <img src={ele.imgSrc} alt="" className='checkout-image' />
-                               </div>
-                               <div className="checkout-container">
-                                      
-                               <div className="Name">
-                                   <p>{ele.Name}</p>
-                                   <p className='Amount'>{ele.price}</p>
-                               </div>
-                               <div className='qty-instock-delete'>
-       
-                               <p>in Stock</p>
-       
-                               <div className="wrapper">
-       
-                               <div className='list'>
-                               <select>
-                               <option value="0">0 (delete)</option>
-                               <option value="1">1</option>
-                               <option value="2">2</option>
-                               <option value="3">3</option>
-                               <option value="4">4</option>
-                               <option value="5">5</option>
-                               <option value="6">6</option>
-                               <option value="7">7</option>
-                               <option value="8">8</option>
-                               <option value="9">9</option>
-                               </select>
-                               </div>
-                              
-                              <div className='delete'>
-                              <span onClick={()=>removeFromBasket(ele)}> Delete </span>
-                              <span> Save for later </span><span> Add to lst </span>
-                              </div>
-                                  
-                               </div>
-                               
-                                 
-                               </div>
-                               
-                                   
-       
-                               </div>
-                              
-                              
-       
-       
-                           </div>
-                             );
+                <div className="left">
 
-                            })}
+                           <h1 className='shopping-cart'>Shopping Cart</h1>
+                    <ShoopingContainer/>
+
+                    
+
+                </div>
 
 
-<div className='Grand-Total'>
-    <span className='Grand-Total-container-Total'>Total</span><span className='Grand-Total-container-rs'>{total!=0?'$':''} {total}</span>
-</div>
-
-                       </div>
-                  
-              
                 {/* End of left */}
 
                 <div className="right">
@@ -120,7 +61,7 @@ function Checkout() {
                         </div>
 
 
-                        <h3>Subtotal ({basket.length} item):{total!=0?'$':''} {total}</h3>
+                        <h3>Subtotal ({basket.length} item):{total != 0 ? '$' : ''} {total}</h3>
 
                         <div className="check-box">
                             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
@@ -129,7 +70,8 @@ function Checkout() {
 
 
                         <div className="proceed_to_buy">
-                            <button >Proceed to Buy</button>
+                            {console.log(user)}
+                            <button onClick={user !=null ? e => navigate('/payment'):''}>Proceed to Buy</button>
                         </div>
                     </div>
 

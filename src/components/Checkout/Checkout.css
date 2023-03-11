@@ -1,5 +1,5 @@
 .Checkout{
-    width: auto;
+    width: 100%;
     min-width: 1000px;
     /* height: 100vh; */
     display: flex;
@@ -133,6 +133,7 @@ align-items: center;
      border-top-right-radius: 10px;
      border-bottom-left-radius: 10px;
      border-bottom-right-radius: 10px;
+     cursor: pointer;
 }
 .total > .freeDelivery{
     display: flex;
@@ -161,7 +162,11 @@ align-items: center;
   height: 25px;
     
 }
-
+.shopping-cart{
+    padding: 2px;
+    margin: 5px 5px;
+   border-bottom: 1px solid rgb(184, 168, 168);
+}
 .check-box label{
     padding-right: 40px;
     
@@ -169,7 +174,7 @@ align-items: center;
 .price-right-cart{
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid rgb(184, 168, 168);
+    /* border-bottom: 1px solid rgb(184, 168, 168); */
 }
 
 .price-right-cart span{

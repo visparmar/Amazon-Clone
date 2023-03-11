@@ -1,0 +1,189 @@
+
+.wrapper{
+    display: flex;
+   
+}
+.qty-instock-delete{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    gap: 10px;
+}
+.qty-instock-delete p{
+    color: green;
+}
+.qty-instock-delete .delete :nth-child(1){
+    padding-left: 10px;
+border-right: 1px solid rgb(190, 178, 178);
+border-left: 1px solid rgb(190, 178, 178);
+
+}
+.qty-instock-delete .delete span{
+    border-right: 1px solid rgb(190, 178, 178);
+    padding: 0 20px;
+    color:  skyblue;
+    cursor: pointer;
+}
+.qty-instock-delete .list{
+    display: inline;
+}
+.qty-instock-delete .list select{
+  background-color: rgb(163, 154, 154);
+   height: 30px;
+   width: 70px;
+  
+   border-radius: 10px;
+   margin-right:20px ;
+}
+.checkout-container{
+    width: 100%;
+    /* display: flex; */
+}
+.product{
+    width: 60%;
+}
+.left >.container-{
+    display: flex;
+    /* flex-direction:column ; */
+    
+
+}.Name{
+    width: 100%;
+}
+.container- .Name{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.container- .Name .Amount{
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px;
+    padding-right: 30px;
+}
+.container- .image{
+    height: 200px;
+    width: 200px;
+}
+.container- .image img{
+    object-fit: contain;
+    width: 200px;
+}
+.container- .Name p{
+    font-weight: 400;
+    font-size: 22px;
+}
+.left{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+margin-right: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+.left > h1{
+    padding-bottom: 14px;
+    font-weight: 400;
+}
+
+.right{
+    /* margin: 10px; */
+    width: 400px;
+    margin-top: 10px;
+margin-left: 10px;
+
+}
+.right .total{
+    height: auto;
+    width: auto;
+    background-color: white;
+padding: 20px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.proceed_to_buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.proceed_to_buy button{
+    height: 30px;
+    width: 300px;
+    /* font-size: 18px; */
+     background-color: rgb(241, 226, 8);
+     border: none;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+     cursor: pointer;
+}
+.total > .freeDelivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px ;
+}
+.total > .freeDelivery p{
+    color: green;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.freeDelivery .MuiSvgIcon-root{
+   color: green;
+    
+}
+.check-box{
+    display: flex;
+    gap: 4px;
+    padding: 5px;
+    
+}
+.check-box input[type=checkbox]{
+    
+  height: 25px;
+    
+}
+
+.check-box label{
+    padding-right: 40px;
+    
+}
+.price-right-cart{
+    display: flex;
+    justify-content: flex-end;
+    /* border-bottom: 1px solid rgb(184, 168, 168); */
+}
+
+.price-right-cart span{
+  color:  rgb(122, 114, 114);
+}
+
+
+/* Grand Total component of Checkout Cart */
+
+.Grand-Total{
+    /* border-top: 1px solid gray; */
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.Grand-Total .Grand-Total-container-Total{
+  font-weight: 600;
+  font-size: 20px;
+}
+.Grand-Total .Grand-Total-container-rs{
+   font-weight: 600;
+   font-size: 28px;
+}
