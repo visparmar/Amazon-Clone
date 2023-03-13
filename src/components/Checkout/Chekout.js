@@ -5,6 +5,7 @@ import { checkboxClasses } from '@mui/material';
 import { useStatevalue } from '../stateprovider/Stateprovider';
 import { useNavigate } from 'react-router-dom';
 import ShoopingContainer from './ShoopingContainer';
+import empty from '../../assets/empty.png'
 
 
 
@@ -35,6 +36,12 @@ function Checkout() {
 
     return (
         <>
+        { basket.length==0 ?
+<div className='-container-'>
+<img src={empty} alt="" className='empty'/>
+</div>
+        
+        :
 
             <div className="Checkout">
 
@@ -81,6 +88,7 @@ function Checkout() {
 
 
             </div>
+}
 
         </>
 
