@@ -1,0 +1,136 @@
+
+.outer-container{
+    width: 100%;
+    height: 100vh;
+    min-width: 1040px;
+    max-width: 100%;
+    background-color: white;
+   
+
+
+}
+.color-black{
+    color: black;
+    font-weight: 700;
+}
+.order-status{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.lower-outer{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    margin-top: 30px
+    
+}
+.lower-container{
+    display: flex;
+    
+    width: 800px;
+    padding: 10px;
+   
+    gap: 50px;
+}
+ul{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    text-decoration: none;
+    border-bottom: 2px solid lightgray;
+}
+.lower-container ul li {
+    padding-bottom: 10px;
+   list-style: none;
+}
+
+.lower-container span{
+    color: #007185;
+    padding-bottom: 10px;
+   
+}
+.lower-container .select-order {
+    color: black;
+    gap: 10px;
+    
+}
+
+
+.lower-container .l1-tag::before {
+    content: '  ';
+     position: absolute;
+     top: 298px;
+     left: 555px;
+     /* box-shadow: 0px 0px 10px orange; */
+     border-bottom: 2px solid rgba(250, 134, 2, 0.925);
+     width: 65px;
+     
+ }
+.order-component p{
+    font-size: 50px;
+}
+.middle-container{
+    /* background-color: aliceblue; */
+   max-width: 100%;
+   height: max-content;
+display: flex;
+padding-top: 100px;
+justify-content: center;
+align-items: center;
+
+gap: 250px;
+
+}
+.Search-box{
+    background-color: white;
+    width: max-content;
+    /* height: 30px; */
+    display: flex;
+    justify-content: center;
+     border: 1px solid gray;
+     border-radius: 4px;
+    align-items: center;
+    
+}
+.Search-box .MuiSvgIcon-root{
+    color: black;
+    font-size: 20px;
+    /* padding-top: 5px; */
+    /* margin-top: 5px; */
+}
+.Search-box .search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.search-all-order{
+    /* height: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Search-box input[placeholder='Search all orders']{
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+.Search-order{
+    display: flex;
+    gap: 8px;
+}
+.Search-Orders{
+ background-color: rgb(53, 47, 47);
+ color: white;
+ font-weight: 750;
+ border-radius: 20px;
+ height: 30px;
+ cursor: pointer;
+ padding: 0px 10px;
+}
+.Search-Orders:hover{
+    background-color: black;
+   }

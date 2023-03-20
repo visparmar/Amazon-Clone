@@ -12,11 +12,12 @@ import Payment from './components/Payment/Payment';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 import Successfull from './components/Order/Successfull';
+import Order from './components/Order/Order'
 
 const stripePromise = loadStripe('pk_test_51Mia27SFyQxgXuo3S6DNSUlYkK0klmzaJJlj4Os4QUcTbLqWfXVC2vwBZHhHwPAsn4ElNcq2PnVtMkApUpRLiqkb00PtgugfGy');
 
 function App() {
-const [{},dispatch]=useStatevalue();
+const [{basket},dispatch]=useStatevalue();
 
 
 
@@ -66,6 +67,7 @@ const [{},dispatch]=useStatevalue();
             
           
           <Route path="Successfull" element={<Successfull/>} />
+          <Route path="Orders" element={<><Header/><Order/></>} />
      </Routes>
 </div>
 
