@@ -51,6 +51,11 @@ ul{
     padding-bottom: 10px;
    
 }
+
+.select-order{
+    
+    border-bottom: 3px solid orange;
+}
 .lower-container .select-order {
     color: black;
     gap: 10px;
@@ -58,16 +63,6 @@ ul{
 }
 
 
-.lower-container .l1-tag::before {
-    content: '  ';
-     position: absolute;
-     top: 298px;
-     left: 555px;
-     /* box-shadow: 0px 0px 10px orange; */
-     border-bottom: 2px solid rgba(250, 134, 2, 0.925);
-     width: 65px;
-     
- }
 .order-component p{
     font-size: 50px;
 }

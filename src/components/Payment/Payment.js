@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './payment.css'
+import { collection, addDoc } from "firebase/firestore"; 
+import { doc, setDoc,updateDoc } from "firebase/firestore"; 
 import { useStatevalue } from '../stateprovider/Stateprovider';
+import{db} from '../../firebase';
 
 import { Link, useNavigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
@@ -58,7 +61,31 @@ const Payment = () => {
 
                 if (response.data.success) {
                     console.log("successful transaction");
+
+               
                     setSuccess(true);
+
+
+                try {
+                   
+
+              
+
+                            await addDoc(collection(db, "users", user?.uid, "Orders"), {
+                                time: new Date(),
+                                
+                                 amount: (getBasketTotal(basket) * 100),
+                                 paymentMethod:paymentMethod.id,
+                                basket:basket,
+                             })
+                          
+                        
+                     
+
+                  } catch (e) {
+                    console.error("Error adding document: ", e);
+                  }
+
 
                 }
             } catch (error) {

@@ -1,9 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Order.css'
 import SearchIcon from '@mui/icons-material/Search';
+import { doc, Firestore, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
+import{db} from '../../firebase';
+
 
 
 const Order = () => {
+    const [cart,setcart]=useState({})
+    const get=async()=>{
+        const querySnapshot = await getDocs(collection(db, "users"));
+        // console.log(querySnapshot._snapshot.docChanges[0])
+    //     const data=querySnapshot.forEach((doc) => {return((doc.data()));
+    //   setcart(data);
+    // })
+    }
+    
     return(
     <>
     <div className="outer-container">
@@ -50,6 +63,23 @@ const Order = () => {
        <div className='order-status'>
        <p><span className='color-black'>0 orders </span>placed </p>
        </div>
+       {
+
+// querySnapshot.map((doc) => {
+  
+//   return(console.log(doc.data()));
+// })
+
+
+
+
+}
+        {/* <p>{ (queryofdocs) ?
+          console.log("Document data:", queryofdocs)
+         :console.log("No such document!")
+        }</p> */}
+
+       
       
         
        
